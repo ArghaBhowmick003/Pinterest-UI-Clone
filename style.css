@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav #left {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+#nav #left svg {
+  border-radius: 50%;
+  color: red;
+  transition: all ease 0.5s;
+}
+
+#nav #left svg:hover {
+  box-shadow: 0px 0px 10px rgb(115, 114, 114);
+}
+
+#nav #left h4 {
+  padding: 10px;
+  border-radius: 40px;
+  transition: all ease 0.5s;
+}
+
+#nav #left h4:hover {
+  color: white;
+  background-color: black;
+}
+
+#nav #middle {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: rgb(236, 236, 236);
+  padding: 12px;
+  border-radius: 25px;
+}
+
+#nav #middle:focus-within {
+  border: 3px solid rgb(0, 162, 255);
+}
+
+#nav #middle:focus-within .bi.bi-search {
+  display: none;
+}
+
+#nav #middle:focus-within .bi.bi-x-circle {
+  display: block;
+}
+
+.bi.bi-x-circle {
+  display: none;
+}
+
+#nav #middle input {
+  width: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  color: black;
+}
+
+#nav #middle input:focus-visible {
+  outline: none;
+}
+
+#nav #right {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#nav #right svg {
+  width: 20%;
+  height: 10%;
+  padding: 3%;
+  margin: 7%;
+  color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+#nav #right svg:hover {
+  background-color: rgba(104, 103, 103, 0.35);
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.allItems {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.itemCard {
+  cursor: pointer;
+  flex: 1 1 18%;
+  max-width: 12%;
+  min-height: 350px;
+  max-height: fit-content;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.item img {
+  width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 5%;
+  object-fit: cover;
+  transition: all ease-in-out 0.3s;
+}
+.item img:hover{
+  transform: scale(1.1);
+}
+.item {
+  padding: 0;
+  height: 92%;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  padding: 3%;
+}
+.item-info svg {
+  width: 15%;
+  height: 30%;
+}
+.item-info .infos {
+  font-weight: 700;
+  margin-left: 5%;
+}
